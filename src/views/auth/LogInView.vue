@@ -9,9 +9,9 @@ function onClick() {
 </script>
 
 <template>
-  <v-responsive class="border rounded" max-height="300">
+  <v-responsive class="border rounded">
     <v-app :theme="theme">
-      <v-app-bar class="px-3">
+      <v-app-bar class="px-3" color="grey-lighten-1">
         <v-spacer></v-spacer>
 
         <v-btn
@@ -24,9 +24,33 @@ function onClick() {
 
       <v-main>
         <v-container>
-          <h1>Main Content</h1>
+          <v-row class="d-flex justify-center">
+            <v-col cols="12" md="6">
+              <v-card class="mx-auto" prepend-icon="mdi-account" subtitle="Log In Form">
+                <template v-slot:title>
+                  <span class="font-weight-black">DSC Woodworks System</span>
+                </template>
+
+                <v-card-text class="bg-surface-light pt-4">
+                  <v-form fast-fail @submit.prevent>
+                    <v-text-field label="Email" variant="outlined"></v-text-field>
+
+                    <v-text-field
+                      label="Password"
+                      type="password"
+                      variant="outlined"
+                    ></v-text-field>
+
+                    <v-btn class="mt-2" type="submit" block>Submit</v-btn>
+                  </v-form>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-container>
       </v-main>
+
+      <v-footer color="grey-lighten-1" border app>Copyright 2025 - DSC Woodworks System</v-footer>
     </v-app>
   </v-responsive>
 </template>

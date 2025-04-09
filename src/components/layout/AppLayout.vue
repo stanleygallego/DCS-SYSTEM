@@ -1,15 +1,16 @@
 <script setup>
 import { ref } from 'vue'
 
-const theme = ref('light')
+const theme = ref(localStorage.getItem('theme') ?? 'light')
 
 function onClick() {
   theme.value = theme.value === 'light' ? 'dark' : 'light'
+  localStorage.setItem('theme', theme.value)
 }
 </script>
 
 <template>
-  <v-responsive class="border rounded">
+  <v-responsive>
     <v-app :theme="theme">
       <v-app-bar
         class="px-3"
@@ -31,7 +32,11 @@ function onClick() {
         <v-container> <slot name="content"> </slot> </v-container>
       </v-main>
 
-      <v-footer :color="theme === 'light' ? 'grey-lighten-1' : 'grey-darken-3'" border app
+      <v-footer
+        class="font-weight-bold"
+        :color="theme === 'light' ? 'grey-lighten-1' : 'grey-darken-3'"
+        border
+        app
         >Copyright 2025 - DSC Woodworks System</v-footer
       >
     </v-app>

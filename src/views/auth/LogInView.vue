@@ -13,8 +13,8 @@ const { mobile } = useDisplay()
         <v-col cols="12" md="6" class="pt-16">
           <v-card class="mx-auto" elevation="24">
             <v-card-title class="text-center">
-              <v-img class="mx-auto" src="/images/logo4.png" width="25%"></v-img>
-              <h5 class="font-weight-black">DSC Woodworks System</h5>
+              <v-img class="mx-auto rounded" src="/images/logo4.png" width="25%"></v-img>
+
               <P class="font-weight-bold">Login Form</P>
             </v-card-title>
 

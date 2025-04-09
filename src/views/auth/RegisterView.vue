@@ -13,6 +13,7 @@ const { mobile } = useDisplay()
         <v-col cols="12" md="6" class="pt-16">
           <v-card class="mx-auto" elevation="24">
             <v-card-title class="text-center">
+              <v-img class="mx-auto" src="/images/logo4.png" width="25%"></v-img>
               <h5 class="font-weight-black">DSC Woodworks System</h5>
               <P class="font-weight-bold">Registration Form</P>
             </v-card-title>
@@ -26,7 +27,7 @@ const { mobile } = useDisplay()
 
               <h5 class="text-center">
                 Already have an account?
-                <RouterLink class="text-primary font-weight-black" to="/"
+                <RouterLink class="text-brown font-weight-black" to="/"
                   >Click here to Login</RouterLink
                 >
               </h5>

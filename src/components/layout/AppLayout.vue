@@ -14,7 +14,7 @@ function onClick() {
     <v-app :theme="theme">
       <v-app-bar
         class="px-3"
-        :color="theme === 'light' ? 'grey-lighten-1' : 'grey-darken-3'"
+        :color="theme === 'light' ? 'brown-lighten-1' : 'brown-darken-3'"
         border
       >
         <v-spacer></v-spacer>
@@ -34,7 +34,7 @@ function onClick() {
 
       <v-footer
         class="font-weight-bold"
-        :color="theme === 'light' ? 'grey-lighten-1' : 'grey-darken-3'"
+        :color="theme === 'light' ? 'brown-lighten-1' : 'brown-darken-3'"
         border
         app
         >Copyright 2025 - DSC Woodworks System</v-footer

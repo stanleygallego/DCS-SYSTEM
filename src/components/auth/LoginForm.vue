@@ -27,7 +27,9 @@ const showPassword = ref(false)
     ></v-text-field>
 
     <RouterLink to="/home">
-      <v-btn type="submit" color="brown" block class="mt-4" to="/home"> Login </v-btn>
+      <v-btn type="submit" color="brown" block class="mt-4" to="/home" text-decoration="none">
+        Login
+      </v-btn>
     </RouterLink>
   </v-form>
 </template>

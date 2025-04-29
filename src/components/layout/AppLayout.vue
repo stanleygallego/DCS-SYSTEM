@@ -18,6 +18,11 @@ function onClick() {
         border
       >
         <v-spacer></v-spacer>
+        <v-btn icon>
+          <RouterLink to="/home">
+            <v-icon>mdi-arrow-left</v-icon>
+          </RouterLink>
+          </v-btn>
 
         <h3>DSC Woodworks System</h3>
         <v-spacer></v-spacer>

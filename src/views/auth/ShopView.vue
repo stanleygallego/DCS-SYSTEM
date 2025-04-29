@@ -22,13 +22,11 @@ const goToGallery = (routeName) => {
   <v-app>
     <v-main>
       <v-container fluid style="background-color: #2e3b32; min-height: 100vh">
-        <v-app-bar color="#6B7D75" dense dark>
-          <v-btn icon>
+        <v-btn icon>
+          <RouterLink to="/home">
             <v-icon>mdi-arrow-left</v-icon>
+          </RouterLink>
           </v-btn>
-          <v-toolbar-title class="text-center w-100">Category</v-toolbar-title>
-        </v-app-bar>
-
         <v-container fluid class="py-6">
           <v-row justify="center" align="center" dense>
             <v-col
@@ -52,3 +50,5 @@ const goToGallery = (routeName) => {
     </v-main>
   </v-app>
 </template>
+
+

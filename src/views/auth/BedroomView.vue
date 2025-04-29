@@ -34,7 +34,9 @@ const goToShop = (images) => {
         <!-- Toolbar/Header -->
         <v-app-bar color="#3A2C26" dense dark>
           <v-btn icon>
-            <v-icon @click="goToShop(images)" to="/Category/">mdi-arrow-left</v-icon>
+          <RouterLink to="/shop">
+            <v-icon>mdi-arrow-left</v-icon>
+          </RouterLink>
           </v-btn>
           <v-toolbar-title class="text-center w-100">BEDROOM FURNITURES</v-toolbar-title>
         </v-app-bar>

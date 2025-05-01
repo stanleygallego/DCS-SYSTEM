@@ -2,8 +2,6 @@
 import { requiredValidator, emailValidator } from '@/utils/validators'
 import { ref } from 'vue'
 
-const email = ref('')
-const password = ref('')
 const showPassword = ref(false)
 
 const refVForm = ref()
@@ -50,10 +48,16 @@ const onFormSubmit = () => {
       :rules="[requiredValidator]"
     ></v-text-field>
 
-    <RouterLink to="/home">
-      <v-btn type="submit" color="brown" block class="mt-4" to="/home" text-decoration="none">
-        Login
-      </v-btn>
-    </RouterLink>
+    <v-btn
+      type="submit"
+      color="brown"
+      prepend-icon="mdi-login"
+      block
+      class="mt-4"
+      to="/home"
+      text-decoration="none"
+    >
+      Login
+    </v-btn>
   </v-form>
 </template>

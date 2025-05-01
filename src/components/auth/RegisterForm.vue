@@ -89,7 +89,7 @@ const onFormSubmit = () => {
         ></v-text-field>
       </v-col>
 
-      <v-col cols="12" md="6">
+      <v-col cols="12">
         <v-text-field
           v-model="formData.email"
           label="Email"
@@ -104,9 +104,9 @@ const onFormSubmit = () => {
           v-model="formData.password"
           prepend-inner-icon="mdi mdi-lock"
           label="Password"
-          :type="isPasswordConfirmVisible ? 'text' : 'password'"
-          :append-inner-icon="isPasswordConfirmVisible ? 'mdi-eye-off' : 'mdi-eye'"
-          @click:append-inner="isPasswordConfirmVisible = !isPasswordConfirmVisible"
+          :type="isPasswordVisible ? 'text' : 'password'"
+          :append-inner-icon="isPasswordVisible ? 'mdi-eye-off' : 'mdi-eye'"
+          @click:append-inner="isPasswordVisible = !isPasswordVisible"
           type="password"
           variant="outlined"
           :rules="[requiredValidator, passwordValidator]"

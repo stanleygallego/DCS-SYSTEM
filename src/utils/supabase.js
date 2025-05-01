@@ -6,7 +6,11 @@ export const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY,
 )
 
+<<<<<<< HEAD
 //Form Action Utils
+=======
+// Form Action Utils
+>>>>>>> feat/supabase
 export const formActionDefault = {
   formProcess: false,
   formStatus: 200,

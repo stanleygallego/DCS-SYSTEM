@@ -7,7 +7,7 @@ import {
 } from '@/utils/validators'
 import { ref } from 'vue'
 import AlertNotification from '@/components/common/AlertNotification.vue'
-import { supabase, formActionDefault } from '@/utils/supabase.js'
+import { supabase, formActionDefault } from '@/utils/supabase'
 
 const formDataDefault = {
   firstname: '',
@@ -105,7 +105,7 @@ const onFormSubmit = () => {
           prepend-inner-icon="mdi mdi-lock"
           label="Password"
           :type="isPasswordVisible ? 'text' : 'password'"
-          :append-inner-icon="isPasswordVisible ? 'mdi-eye-off' : 'mdi-eye'"
+          :append-inner-icon="isPasswordVisible ? 'mdi mdi-eye-off-outline' : 'mdi mdi-eye-outline'"
           @click:append-inner="isPasswordVisible = !isPasswordVisible"
           type="password"
           variant="outlined"
@@ -116,13 +116,10 @@ const onFormSubmit = () => {
       <v-col cols="12" md="6">
         <v-text-field
           v-model="formData.password_confirmation"
-          prepend-inner-icon="mdi mdi-lock"
-          label="Confirm Password "
+          label="Password Confirmation"
           :type="isPasswordConfirmVisible ? 'text' : 'password'"
           :append-inner-icon="isPasswordConfirmVisible ? 'mdi-eye-off' : 'mdi-eye'"
           @click:append-inner="isPasswordConfirmVisible = !isPasswordConfirmVisible"
-          type="password"
-          variant="outlined"
           :rules="[
             requiredValidator,
             confirmedValidator(formData.password_confirmation, formData.password),

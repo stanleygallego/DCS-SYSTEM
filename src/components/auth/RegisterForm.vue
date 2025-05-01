@@ -7,7 +7,7 @@ import {
 } from '@/utils/validators'
 import { ref } from 'vue'
 import AlertNotification from '@/components/common/AlertNotification.vue'
-import { supabase, formActionDefault } from '@utils/supabase/js'
+import { supabase, formActionDefault } from '@/utils/supabase'
 
 const formDataDefault = {
   firstname: '',
@@ -34,7 +34,7 @@ const onSubmit = async () => {
 
   const { data, error } = await supabase.auth.signUp({
     email: formData.value.email,
-    password: formAction.value.password,
+    password: formData.value.password,
     options: {
       data: {
         firstname: formData.value.firstname,
@@ -89,11 +89,11 @@ const onFormSubmit = () => {
         ></v-text-field>
       </v-col>
 
-      <v-col cols="12" md="6">
+      <v-col cols="12">
         <v-text-field
           v-model="formData.email"
           label="Email"
-          prepend-icon="mdi-email-outline"
+          prepend-inner-icon="mdi-email-outline"
           :rules="[requiredValidator, emailValidator]"
           variant="outlined"
         ></v-text-field>
@@ -105,7 +105,7 @@ const onFormSubmit = () => {
           prepend-inner-icon="mdi mdi-lock"
           label="Password"
           :type="isPasswordVisible ? 'text' : 'password'"
-          :append-icon="isPasswordVisible ? 'mdi mdi-eye-off-outline' : 'mdi mdi-eye-outline'"
+          :append-inner-icon="isPasswordVisible ? 'mdi mdi-eye-off-outline' : 'mdi mdi-eye-outline'"
           @click:append-inner="isPasswordVisible = !isPasswordVisible"
           type="password"
           variant="outlined"
@@ -116,18 +116,13 @@ const onFormSubmit = () => {
       <v-col cols="12" md="6">
         <v-text-field
           v-model="formData.password_confirmation"
-          prepend-inner-icon="mdi mdi-lock"
-          label="Password Confirmation "
+          label="Password Confirmation"
           :type="isPasswordConfirmVisible ? 'text' : 'password'"
-          :append-icon="
-            isConfirmPasswordVisible ? 'mdi mdi-eye-off-outline' : 'mdi mdi-eye-outline'
-          "
+          :append-inner-icon="isPasswordConfirmVisible ? 'mdi-eye-off' : 'mdi-eye'"
           @click:append-inner="isPasswordConfirmVisible = !isPasswordConfirmVisible"
-          type="password"
-          variant="outlined"
           :rules="[
             requiredValidator,
-            confirmedValidator(formDatapassword_confirmation, formData.password),
+            confirmedValidator(formData.password_confirmation, formData.password),
           ]"
         ></v-text-field>
       </v-col>

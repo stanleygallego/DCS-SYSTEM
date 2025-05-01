@@ -56,11 +56,14 @@ function onClick() {
 
       <v-footer
         class="font-weight-bold"
+        :class="mobile ? 'text-caption' : ''"
         :color="theme === 'light' ? 'brown-lighten-1' : 'brown-darken-3'"
         border
         app
-        >Copyright 2025 - DSC Woodworks System</v-footer
-      >
+        >Copyright 2025-DSC Woodworks System
+
+        <div :class="mobile ? 'w-100 text-center' : ''"></div>
+      </v-footer>
     </v-app>
   </v-responsive>
 </template>

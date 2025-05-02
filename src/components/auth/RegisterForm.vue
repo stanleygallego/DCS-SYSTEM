@@ -8,7 +8,11 @@ import {
 import { ref } from 'vue'
 import AlertNotification from '@/components/common/AlertNotification.vue'
 import { supabase, formActionDefault } from '@/utils/supabase'
+import { useRouter } from 'vue-router'
 
+//Load pre-defined vue functions
+const router = useRouter()
+//Load Variables
 const formDataDefault = {
   firstname: '',
   lastname: '',
@@ -28,8 +32,11 @@ const isPasswordVisible = ref(false)
 const isPasswordConfirmVisible = ref(false)
 const refVForm = ref()
 
+//Registration Functionalities
 const onSubmit = async () => {
+  //Reset form action utils
   formAction.value = { ...formActionDefault }
+  //Turn on Processing
   formAction.value.formProcess = true
 
   const { data, error } = await supabase.auth.signUp({
@@ -44,18 +51,24 @@ const onSubmit = async () => {
   })
 
   if (error) {
+    //Add Error Message and Status Code
     console.log(error)
     formAction.value.formErrorMessage = error.message
     formAction.value.formStatus = error.status
   } else if (data) {
     console.log(data)
+    //Add Success Message
     formAction.value.formSuccessMessage = 'Successfully Registered Account.'
-    refVForm.value?.reset()
+    //Route to homepage
+    router.replace('/home')
   }
-
+  //Reset Form
+  refVForm.value?.reset()
+  //Turn off Processing
   formAction.value.formProcess = false
 }
 
+//Trigger Validators
 const onFormSubmit = () => {
   refVForm.value?.validate().then(({ valid }) => {
     if (valid) onSubmit()

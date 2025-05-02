@@ -1,5 +1,7 @@
 <script setup>
-import AppLayout from '@/components/layout/AppLayout.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 </script>
 
 <template>
@@ -28,9 +30,7 @@ import AppLayout from '@/components/layout/AppLayout.vue'
             <v-btn variant="text" class="text-black" to="/about"> About Us </v-btn>
           </RouterLink>
           <v-avatar size="40" class="ml-4">
-            <RouterLink to="/login">
-              <v-icon>mdi-account-circle</v-icon>
-            </RouterLink>
+            <v-icon>mdi-account-circle</v-icon>
           </v-avatar>
         </div>
 

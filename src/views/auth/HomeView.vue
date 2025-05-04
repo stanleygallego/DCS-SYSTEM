@@ -29,8 +29,8 @@ const router = useRouter()
           <RouterLink>
             <v-btn variant="text" class="text-black" to="/about"> About Us </v-btn>
           </RouterLink>
-          <v-avatar size="40" class="ml-4">
-            <v-icon>mdi-account-circle</v-icon>
+          <v-avatar size="40" class="ml-4 text-black">
+            <RouterLink to="/login"> <v-icon>mdi-account-circle</v-icon></RouterLink>
           </v-avatar>
         </div>
 

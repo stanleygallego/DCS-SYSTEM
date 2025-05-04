@@ -1,12 +1,27 @@
 <script setup>
-import { ref } from 'vue'
+import { isAuthenticated } from '@/utils/supabase'
+import { onMounted, ref } from 'vue'
 
 const theme = ref(localStorage.getItem('theme') ?? 'light')
 
+//Load Variables
+const isLoggedIn = ref(false)
+
+//Toggle Theme
 function onClick() {
   theme.value = theme.value === 'light' ? 'dark' : 'light'
   localStorage.setItem('theme', theme.value)
 }
+
+//Get authentication status from supabase
+const getLoggedStatus = async () => {
+  isLoggedIn.value = await isAuthenticated()
+}
+
+//Load functions durig component rendering
+onMounted(() => {
+  getLoggedStatus()
+})
 </script>
 
 <template>

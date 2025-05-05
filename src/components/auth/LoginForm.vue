@@ -54,7 +54,7 @@ const onFormSubmit = () => {
       prepend-icon="mdi-login"
       block
       class="mt-4"
-      to="/"
+      to="/shop"
       text-decoration="none"
     >
       Login

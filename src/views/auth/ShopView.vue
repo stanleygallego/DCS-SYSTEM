@@ -3,7 +3,6 @@ import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
 const { mobile } = useDisplay()
-
 const router = useRouter()
 
 const categories = [
@@ -16,17 +15,22 @@ const categories = [
 const goToGallery = (routeName) => {
   router.push({ name: routeName })
 }
+
+const goBackToHome = () => {
+  router.push({ name: '/' }) // Or use router.back()
+}
 </script>
 
 <template>
   <v-app>
     <v-main>
       <v-container fluid style="background-color: #2e3b32; min-height: 100vh">
-        <v-btn icon>
-          <RouterLink to="/home">
-            <v-icon>mdi-arrow-left</v-icon>
-          </RouterLink>
-          </v-btn>
+        <!-- Back Button -->
+        <v-btn icon @click="goBackToHome" class="ma-2">
+          <v-icon>mdi-arrow-left</v-icon>
+        </v-btn>
+
+        <!-- Category Buttons -->
         <v-container fluid class="py-6">
           <v-row justify="center" align="center" dense>
             <v-col
@@ -50,5 +54,3 @@ const goToGallery = (routeName) => {
     </v-main>
   </v-app>
 </template>
-
-

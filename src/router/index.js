@@ -10,6 +10,7 @@ import KitchenView from '@/views/auth/KitchenView.vue'
 import LivingView from '@/views/auth/LivingView.vue'
 import CustomizeView from '@/views/auth/CustomizeView.vue'
 import BedroomView from '@/views/auth/BedroomView.vue'
+import AddProductView from '@/views/auth/AddProductView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -69,6 +70,11 @@ const router = createRouter({
       path: '/bedroom',
       name: 'bedroom',
       component: BedroomView,
+    },
+    {
+      path: '/addproduct',
+      name: 'addproduct',
+      component: AddProductView,
     },
   ],
 })

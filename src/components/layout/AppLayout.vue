@@ -33,13 +33,18 @@ onMounted(() => {
         border
       >
         <v-spacer></v-spacer>
-        <v-btn icon>
-          <RouterLink to="/home">
-            <v-icon>mdi-arrow-left</v-icon>
-          </RouterLink>
-          </v-btn>
 
         <h3>DSC Woodworks System</h3>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
         <v-spacer></v-spacer>
@@ -80,7 +85,7 @@ onMounted(() => {
         :color="theme === 'light' ? 'brown-lighten-1' : 'brown-darken-3'"
         border
         app
-        >Copyright 2025-DSC Woodworks System
+        >Copyright 2025 - DSC Woodworks System
 
         <div :class="mobile ? 'w-100 text-center' : ''"></div>
       </v-footer>

@@ -6,24 +6,24 @@ import { useDisplay } from 'vuetify'
 const { mobile } = useDisplay()
 
 const images = ref([
-  'https://source.unsplash.com/300x400/?kitchen,furniture',
-  'https://source.unsplash.com/301x400/?kitchen,table',
-  'https://source.unsplash.com/302x400/?kitchen,chairs',
-  'https://source.unsplash.com/303x400/?kitchen,island',
-  'https://source.unsplash.com/304x400/?kitchen,dining',
-  'https://source.unsplash.com/305x400/?kitchen,stools',
-  'https://source.unsplash.com/306x400/?kitchen,storage',
-  'https://source.unsplash.com/307x400/?kitchen,cabinets',
-  'https://source.unsplash.com/308x400/?kitchen,sink',
-  'https://source.unsplash.com/309x400/?kitchen,knife',
-  'https://source.unsplash.com/310x400/?kitchen,utensils',
-  'https://source.unsplash.com/311x400/?kitchen,modern',
-  'https://source.unsplash.com/312x400/?kitchen,wood',
-  'https://source.unsplash.com/313x400/?kitchen,design',
-  'https://source.unsplash.com/314x400/?kitchen,cozy',
+  'https://unsplash.com/photos/brown-kitchen-cabinet-with-kitchen-island-ykHFS4Ul64U',
+  'https://unsplash.com/photos/a-modern-kitchen-with-a-bar-and-stools-80DAbtNfh4k',
+  'https://unsplash.com/photos/white-and-black-gas-range-oven-VgyN_CWXQVM',
+  'https://unsplash.com/photos/brown-wooden-kitchen-cabinet-JDBVXignFdA',
+  'https://unsplash.com/photos/brown-wooden-shelf-CX8ooha2yLA',
+  'https://unsplash.com/photos/white-wooden-kitchen-cabinet-and-white-kitchen-counter-UDDULE_eIBYs',
+  'https://unsplash.com/photos/a-room-with-a-table-and-chairs-BdU_E9nv1yY',
+  'https://unsplash.com/photos/yellow-armchair-and-stool-beside-wooden-nightstand-by-the-wall-near-glass-window-and-bed-g_8MrEZAvyE',
+  'https://unsplash.com/photos/gray-sofa-seet-f8egRYt5RGk',
+  'https://unsplash.com/photos/empty-black-plastic-tub-chair-ssbgw3cKdXg',
+  'https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-large-window-8fY8lWL6MfU',
+  'https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-window-j6VEVVaYauc',
+  'https://unsplash.com/photos/modern-living-room-interior-with-yellow-armchair-and-floor-lamp-3d-rendering-WMrdj6KgET4',
+  'https://unsplash.com/photos/brown-leather-2-seat-sofa-bpg-ngqrPc8',
+  'https://unsplash.com/photos/black-cat-OzqieLcs464',
 ])
 const goToShop = (images) => {
-  router.push({ name: 'Shop', params: { Images } })
+  router.push({ name: '/Shop', params: { images } })
 }
 </script>
 
@@ -34,9 +34,9 @@ const goToShop = (images) => {
         <!-- Toolbar/Header -->
         <v-app-bar color="#3A2C26" dense dark>
           <v-btn icon>
-          <RouterLink to="/shop">
-            <v-icon>mdi-arrow-left</v-icon>
-          </RouterLink>
+            <RouterLink to="/shop">
+              <v-icon>mdi-arrow-left</v-icon>
+            </RouterLink>
           </v-btn>
           <v-toolbar-title class="text-center w-100">BEDROOM FURNITURES</v-toolbar-title>
         </v-app-bar>

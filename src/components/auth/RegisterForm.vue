@@ -60,7 +60,7 @@ const onSubmit = async () => {
     //Add Success Message
     formAction.value.formSuccessMessage = 'Successfully Registered Account.'
     //Route to homepage
-    router.replace('/home')
+    router.replace('/')
   }
   //Reset Form
   refVForm.value?.reset()

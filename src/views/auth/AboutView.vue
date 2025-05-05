@@ -7,12 +7,12 @@ const { mobile } = useDisplay()
 <template>
   <v-container fluid class="pa-6 about-us-container">
     <v-btn icon>
-          <RouterLink to="/home">
-            <v-icon>mdi-arrow-left</v-icon>
-          </RouterLink>
-          </v-btn>
+      <RouterLink to="/">
+        <v-icon>mdi-arrow-left</v-icon>
+      </RouterLink>
+    </v-btn>
     <v-row class="justify-center">
-      <v-col cols="12" md="10">
+      <v-col cols="12" md="12">
         <v-card flat class="pa-8 rounded-xl about-card">
           <h2 class="text-center text-h2 mb-8 font-weight-bold">ABOUT US</h2>
 
@@ -20,7 +20,7 @@ const { mobile } = useDisplay()
             <!-- Left Text Box -->
             <v-col cols="12" md="6">
               <v-card class="pa-3 text-card" color="#455546" elevation="0">
-                <p class="text-white text-h3">
+                <p class="text-white text-h3 text-center">
                   We guarantee that our solid wood products meet the highest quality standards. With
                   precision craftsmanship, we create Kitchen Furniture, Living Room Furniture,
                   Bedroom Furniture, and more customized to your specifications.

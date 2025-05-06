@@ -1,75 +1,58 @@
-<script setup>
-import { useDisplay } from 'vuetify'
-
-const { mobile } = useDisplay()
-</script>
-
 <template>
-  <v-container fluid class="pa-6 about-us-container">
-    <v-btn icon>
-      <RouterLink to="/">
-        <v-icon>mdi-arrow-left</v-icon>
-      </RouterLink>
-    </v-btn>
-    <v-row class="justify-center">
-      <v-col cols="12" md="12">
-        <v-card flat class="pa-8 rounded-xl about-card">
-          <h2 class="text-center text-h2 mb-8 font-weight-bold">ABOUT US</h2>
+  <v-container class="py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-20">
+      <v-row justify="center">
+        <v-col cols="12" md="8">
+          <h1 class="text-h3 font-weight-bold mb-4">About Our Company</h1>
+          <p class="text-subtitle-1 mb-6">
+            Blending Traditional Woodcraft with Modern Living — Because Your Space Deserves More
+            Than the Ordinary.
+          </p>
+        </v-col>
+      </v-row>
+    </section>
 
-          <v-row>
-            <!-- Left Text Box -->
-            <v-col cols="12" md="6">
-              <v-card class="pa-3 text-card" color="#455546" elevation="0">
-                <p class="text-white text-h3 text-center">
-                  We guarantee that our solid wood products meet the highest quality standards. With
-                  precision craftsmanship, we create Kitchen Furniture, Living Room Furniture,
-                  Bedroom Furniture, and more customized to your specifications.
-                </p>
-              </v-card>
-            </v-col>
+    <!-- Our Values Section -->
+    <section class="mb-20">
+      <h2 class="text-h4 font-weight-bold mb-10 text-center mt-5">Our Values</h2>
+      <v-row>
+        <v-col cols="12" md="4" v-for="(value, i) in values" :key="i">
+          <v-card elevation="3">
+            <v-card-text class="text-center">
+              <v-avatar class="mb-4" color="primary" size="48">
+                <v-icon color="white">{{ value.icon }}</v-icon>
+              </v-avatar>
+              <h3 class="text-h6 font-semibold mb-2">{{ value.title }}</h3>
+              <p class="text-body-2 text-muted">{{ value.description }}</p>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </section>
 
-            <!-- Right Image Grid -->
-            <v-col cols="12" md="6">
-              <v-row class="g-4">
-                <v-col cols="6">
-                  <v-img src="/path-to-your-image1.jpg" aspect-ratio="1" class="rounded-lg"></v-img>
-                </v-col>
-
-                <v-col cols="6">
-                  <v-img src="/path-to-your-image2.jpg" aspect-ratio="1" class="rounded-lg"></v-img>
-                </v-col>
-
-                <v-col cols="12">
-                  <v-img
-                    src="/path-to-your-image3.jpg"
-                    aspect-ratio="2"
-                    class="rounded-lg mt-4"
-                  ></v-img>
-                </v-col>
-              </v-row>
-            </v-col>
-          </v-row>
-        </v-card>
-      </v-col>
-    </v-row>
+    <!-- Contact Section -->
   </v-container>
 </template>
 
-<style scoped>
-.about-us-container {
-  background-color: #2f3e2f; /* dark green background */
-  min-height: 100vh;
-}
+<script setup>
+import { ref } from 'vue'
 
-.about-card {
-  background-color: #2f3e2f;
-}
-
-.text-card {
-  border-radius: 16px;
-}
-
-.g-4 {
-  gap: 1rem;
-}
-</style>
+const values = ref([
+  {
+    title: 'Passion',
+    description: "We're driven by passion for what we do and the impact we create.",
+    icon: 'mdi-heart',
+  },
+  {
+    title: 'Collaboration',
+    description: 'We believe in teamwork and building strong relationships.',
+    icon: 'mdi-account-group',
+  },
+  {
+    title: 'Excellence',
+    description: 'We constantly push boundaries and exceed expectations.',
+    icon: 'mdi-target',
+  },
+])
+</script>

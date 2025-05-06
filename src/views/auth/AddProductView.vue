@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const product = ref({
   name: '',
@@ -16,18 +17,14 @@ const submitProduct = () => {
 </script>
 
 <template>
-  <v-container class="pa-8" style="background-color: #6d4c41; min-height: 100vh" fluid>
-    <v-btn icon variant="plain" color="white" class="mb-4">
-      <v-icon>mdi-arrow-left</v-icon>
-    </v-btn>
-
+  <v-container class="pa-8" style="background-color: #d7ccc8; min-height: 100vh" fluid>
     <v-card
       class="mx-auto pa-8"
       max-width="600"
-      style="background-color: #6d4c41; border-radius: 20px"
+      style="background-color: #4e342e; border-radius: 20px"
     >
       <div class="d-flex justify-space-between align-center mb-6">
-        <h2 class="text-white font-weight-bold">DSC WoodWorks</h2>
+        <h2 class="text-white font-weight-bold">WoodWorks</h2>
         <RouterLink to="/"><v-btn color="white" text>Dashboard</v-btn></RouterLink>
       </div>
 
@@ -48,7 +45,6 @@ const submitProduct = () => {
           hide-details
           class="mb-4"
           color="white"
-          type="text"
         ></v-text-field>
 
         <v-textarea
@@ -79,9 +75,11 @@ const submitProduct = () => {
           color="white"
         ></v-file-input>
 
-        <v-btn color="white" variant="flat" class="text-black" @click="submitProduct">
-          Add Product
-        </v-btn>
+        <RouterLink to="shop"
+          ><v-btn color="white" variant="flat" class="text-black" @click="submitProduct">
+            Add Product
+          </v-btn></RouterLink
+        >
       </v-form>
     </v-card>
   </v-container>

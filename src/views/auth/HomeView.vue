@@ -10,7 +10,7 @@ const router = useRouter()
       <v-spacer></v-spacer>
       <v-btn variant="text" class="font-weight-medium me-4" to="/about"> ABOUT US </v-btn>
       <v-btn icon color="black" to="/login">
-        <v-icon>mdi-account-circle</v-icon>
+        <v-icon class="me-5">mdi-account-circle</v-icon>
       </v-btn>
     </v-app-bar>
 

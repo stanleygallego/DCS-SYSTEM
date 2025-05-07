@@ -40,7 +40,7 @@ const furniture = ref([
     name: 'Coffee Table',
     category: 'living',
     price: 249.99,
-    image: '@/src/assets/images//kitchen.jpg',
+    image: '/src/assets/images/kape.jpg',
     description:
       'Elegant coffee table with a glass top and wooden base, adds style to any living space.',
   },
@@ -86,8 +86,7 @@ const furniture = ref([
     name: 'Custom Bookshelf',
     category: 'custom',
     price: 349.99,
-    image:
-      'https://images.unsplash.com/photo-1588279102080-a8333fd4dc34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    image: '/src/assets/images/shelf.jpg',
     description:
       'Customizable bookshelf with adjustable shelves to fit your specific needs and space.',
   },
@@ -96,8 +95,7 @@ const furniture = ref([
     name: 'Custom TV Stand',
     category: 'custom',
     price: 279.99,
-    image:
-      'https://images.unsplash.com/photo-1588279102080-a8333fd4dc34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    image: '/src/assets/images/tv.jpg',
     description: 'Made-to-order TV stand with cable management and storage options.',
   },
   {
@@ -123,8 +121,7 @@ const furniture = ref([
     name: 'Kitchen Island',
     category: 'kitchen',
     price: 699.99,
-    image:
-      'https://images.unsplash.com/photo-1556911220-bda9f7f7597e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+    image: '/src/assets/images/kusina.jpg',
     description: 'Multifunctional kitchen island with storage space and breakfast bar.',
   },
   {
@@ -230,7 +227,7 @@ const selectImage = (imageIndex) => {
         v-if="currentView === 'details'"
         @click="backToGallery"
       ></v-app-bar-nav-icon>
-      <v-app-bar-title>DSC WOODWORKS</v-app-bar-title>
+      <v-app-bar-title>DCS WOODWORKS</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-text-field
         v-if="currentView === 'gallery'"
@@ -389,7 +386,7 @@ const selectImage = (imageIndex) => {
     <v-footer app class="bg-brown text-center d-flex">
       <div></div>
       <div class="white--text pt-2">
-        © {{ new Date().getFullYear() }} — <strong>DSC Woodworks</strong>
+        © {{ new Date().getFullYear() }} — <strong>DCS Woodworks</strong>
       </div>
     </v-footer>
 

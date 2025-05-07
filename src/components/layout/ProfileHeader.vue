@@ -50,39 +50,41 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-menu min-width="200px" rounded>
-    <template #activator="{ props }">
-      <v-btn icon v-bind="props">
-        <v-avatar color="grey-darken-4" size="large">
-          <span class="text-h5">{{ userData.initials }}</span>
-        </v-avatar>
-      </v-btn>
-    </template>
-
-    <v-card class="mt-1">
-      <v-card-text>
-        <v-list>
-          <v-list-item :subtitle="userData.email" :title="userData.fullname">
-            <template #prepend>
-              <v-avatar color="grey-darken-4" size="large">
-                <span class="text-h5">{{ userData.initials }}</span>
-              </v-avatar>
-            </template>
-          </v-list-item>
-        </v-list>
-
-        <v-divider class="my-3"></v-divider>
-
-        <v-btn
-          prepend-icon="mdi mdi-logout"
-          variant="plain"
-          @click="onLogOut"
-          :loading="formAction.formProcess"
-          :disabled="formAction.formProcess"
-        >
-          Logout
+  <div>
+    <v-menu min-width="200px" rounded>
+      <template #activator="{ props }">
+        <v-btn icon v-bind="props">
+          <v-avatar color="grey-darken-4" size="large">
+            <span class="text-h5">{{ userData.initials }}</span>
+          </v-avatar>
         </v-btn>
-      </v-card-text>
-    </v-card>
-  </v-menu>
+      </template>
+
+      <v-card class="mt-1">
+        <v-card-text>
+          <v-list>
+            <v-list-item :subtitle="userData.email" :title="userData.fullname">
+              <template #prepend>
+                <v-avatar color="grey-darken-4" size="large">
+                  <span class="text-h5">{{ userData.initials }}</span>
+                </v-avatar>
+              </template>
+            </v-list-item>
+          </v-list>
+
+          <v-divider class="my-3"></v-divider>
+
+          <v-btn
+            prepend-icon="mdi mdi-logout"
+            variant="plain"
+            @click="onLogOut"
+            :loading="formAction.formProcess"
+            :disabled="formAction.formProcess"
+          >
+            Logout
+          </v-btn>
+        </v-card-text>
+      </v-card>
+    </v-menu>
+  </div>
 </template>

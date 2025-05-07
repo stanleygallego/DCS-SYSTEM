@@ -61,28 +61,30 @@ function goBack() {
     <v-row class="justify-center mt-10">
       <v-col class="text-center" cols="12" md="4">
         <v-avatar :size="200" class="elevation-12 mx-auto mb-4">
-          <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
+          <v-img src="/src/assets/images/ako.jpg"></v-img>
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">FRONTEND DEVELOPER</div>
 
-        <div class="text-black text-subtitle-1 font-weight-medium">John Doe</div>
+        <div class="text-black text-subtitle-1 font-weight-medium">
+          Colbhorne Stanley G. Gallego
+        </div>
       </v-col>
 
       <v-col class="text-center" cols="12" md="4">
         <v-avatar :size="200" class="elevation-12 mx-auto mb-4">
-          <v-img src="https://randomuser.me/api/portraits/women/65.jpg"></v-img>
+          <v-img src="/src/assets/images/nignig.jpg"></v-img>
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">SYSTEM ANALYST</div>
-        <div class="text-black text-subtitle-1 font-weight-medium">Jane Smith</div>
+        <div class="text-black text-subtitle-1 font-weight-medium">Clint R. Rebusa</div>
       </v-col>
 
       <v-col class="text-center" cols="12" md="4">
         <v-avatar :size="200" class="elevation-12 mx-auto mb-4">
-          <v-img src="https://randomuser.me/api/portraits/men/82.jpg"></v-img>
+          <v-img src="/src/assets/images/dan.png"></v-img>
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">FRONTEND DEVELOPER</div>
 
-        <div class="text-black text-subtitle-1 font-weight-medium">Alex Johnson</div>
+        <div class="text-black text-subtitle-1 font-weight-medium">Danilo R. Bituro</div>
       </v-col>
     </v-row>
   </v-footer>

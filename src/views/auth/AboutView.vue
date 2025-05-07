@@ -1,3 +1,25 @@
+<script setup>
+import { ref } from 'vue'
+
+const values = ref([
+  {
+    title: 'Passion',
+    description: "We're driven by passion for what we do and the impact we create.",
+    icon: 'mdi-heart',
+  },
+  {
+    title: 'Collaboration',
+    description: 'We believe in teamwork and building strong relationships.',
+    icon: 'mdi-account-group',
+  },
+  {
+    title: 'Excellence',
+    description: 'We constantly push boundaries and exceed expectations.',
+    icon: 'mdi-target',
+  },
+])
+</script>
+
 <template>
   <v-container class="py-12">
     <!-- Hero Section -->
@@ -34,25 +56,3 @@
     <!-- Contact Section -->
   </v-container>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const values = ref([
-  {
-    title: 'Passion',
-    description: "We're driven by passion for what we do and the impact we create.",
-    icon: 'mdi-heart',
-  },
-  {
-    title: 'Collaboration',
-    description: 'We believe in teamwork and building strong relationships.',
-    icon: 'mdi-account-group',
-  },
-  {
-    title: 'Excellence',
-    description: 'We constantly push boundaries and exceed expectations.',
-    icon: 'mdi-target',
-  },
-])
-</script>

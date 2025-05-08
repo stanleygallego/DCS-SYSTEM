@@ -65,9 +65,7 @@ function goBack() {
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">FRONTEND DEVELOPER</div>
 
-        <div class="text-black text-subtitle-1 font-weight-medium">
-          Colbhorne Stanley G. Gallego
-        </div>
+        <div class="text-black text-subtitle-1 font-weight-medium">Colbhorne Stanley Gallego</div>
       </v-col>
 
       <v-col class="text-center" cols="12" md="4">
@@ -75,7 +73,7 @@ function goBack() {
           <v-img src="/src/assets/images/nignig.jpg"></v-img>
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">SYSTEM ANALYST</div>
-        <div class="text-black text-subtitle-1 font-weight-medium">Clint R. Rebusa</div>
+        <div class="text-black text-subtitle-1 font-weight-medium">Clint Rebusa</div>
       </v-col>
 
       <v-col class="text-center" cols="12" md="4">
@@ -84,7 +82,7 @@ function goBack() {
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">FRONTEND DEVELOPER</div>
 
-        <div class="text-black text-subtitle-1 font-weight-medium">Danilo R. Bituro</div>
+        <div class="text-black text-subtitle-1 font-weight-medium">Danilo Bituro</div>
       </v-col>
     </v-row>
   </v-footer>

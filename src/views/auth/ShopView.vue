@@ -40,7 +40,7 @@ const furniture = ref([
     name: 'Coffee Table',
     category: 'living',
     price: 249.99,
-    image: '/src/assets/images/kape.jpg',
+    image: '/images/images/kape.jpg',
     description:
       'Elegant coffee table with a glass top and wooden base, adds style to any living space.',
   },
@@ -86,7 +86,7 @@ const furniture = ref([
     name: 'Custom Bookshelf',
     category: 'custom',
     price: 349.99,
-    image: '/src/assets/images/shelf.jpg',
+    image: '/images/images/shelf.jpg',
     description:
       'Customizable bookshelf with adjustable shelves to fit your specific needs and space.',
   },
@@ -95,7 +95,7 @@ const furniture = ref([
     name: 'Custom TV Stand',
     category: 'custom',
     price: 279.99,
-    image: '/src/assets/images/tv.jpg',
+    image: '/images/images/tv.jpg',
     description: 'Made-to-order TV stand with cable management and storage options.',
   },
   {
@@ -121,7 +121,7 @@ const furniture = ref([
     name: 'Kitchen Island',
     category: 'kitchen',
     price: 699.99,
-    image: '/src/assets/images/kusina.jpg',
+    image: '/images/images/kusina.jpg',
     description: 'Multifunctional kitchen island with storage space and breakfast bar.',
   },
   {

@@ -1,19 +1,15 @@
-<script setup>
-function goBack() {
-  console.log('Go back clicked')
-}
-</script>
+<script setup></script>
 
 <template>
   <v-app>
     <div class="about-page">
-      <v-btn icon class="ma-4" color="white" variant="text" @click="goBack">
-        <RouterLink to="/">
+      <RouterLink to="/">
+        <v-btn icon class="ma-4" color="white" variant="text">
           <div>
             <v-icon class="black">mdi-arrow-left</v-icon>
-          </div></RouterLink
-        >
-      </v-btn>
+          </div>
+        </v-btn>
+      </RouterLink>
 
       <v-container class="text-center py-10">
         <h1 class="text-h3 font-weight-medium text-white mb-10">About Us</h1>
@@ -32,7 +28,7 @@ function goBack() {
           <v-col cols="12" md="5">
             <div class="image-gallery">
               <v-img
-                src="/src/assets/images/kape.jpg"
+                src="/images/images/kape.jpg"
                 class="gallery-image top-image"
                 height="200"
                 cover
@@ -61,7 +57,7 @@ function goBack() {
     <v-row class="justify-center mt-10">
       <v-col class="text-center" cols="12" md="4">
         <v-avatar :size="200" class="elevation-12 mx-auto mb-4">
-          <v-img src="/src/assets/images/ako.jpg"></v-img>
+          <v-img src="images/images/ako.jpg"></v-img>
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">FRONTEND DEVELOPER</div>
 
@@ -70,7 +66,7 @@ function goBack() {
 
       <v-col class="text-center" cols="12" md="4">
         <v-avatar :size="200" class="elevation-12 mx-auto mb-4">
-          <v-img src="/src/assets/images/nignig.jpg"></v-img>
+          <v-img src="images/images/nignig.jpg"></v-img>
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">SYSTEM ANALYST</div>
         <div class="text-black text-subtitle-1 font-weight-medium">Clint Rebusa</div>
@@ -78,7 +74,7 @@ function goBack() {
 
       <v-col class="text-center" cols="12" md="4">
         <v-avatar :size="200" class="elevation-12 mx-auto mb-4">
-          <v-img src="/src/assets/images/dan.png"></v-img>
+          <v-img src="images/images/dan.png"></v-img>
         </v-avatar>
         <div class="text-black text-subtitle-1 font-weight-medium">FRONTEND DEVELOPER</div>
 

@@ -17,7 +17,7 @@ const submitProduct = () => {
 </script>
 
 <template>
-  <v-container class="pa-8" style="background-color: #d7ccc8; min-height: 100vh" fluid>
+  <v-container class="pa-8" style="background-color: #75584a; min-height: 100vh" fluid>
     <v-card
       class="mx-auto pa-8"
       max-width="600"

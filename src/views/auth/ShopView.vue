@@ -227,6 +227,13 @@ const selectImage = (imageIndex) => {
         v-if="currentView === 'details'"
         @click="backToGallery"
       ></v-app-bar-nav-icon>
+      <RouterLink to="/">
+        <v-btn icon class="" color="white" variant="text">
+          <div>
+            <v-icon class="black">mdi-arrow-left</v-icon>
+          </div>
+        </v-btn>
+      </RouterLink>
       <v-app-bar-title>DCS WOODWORKS</v-app-bar-title>
       <v-spacer></v-spacer>
       <v-text-field

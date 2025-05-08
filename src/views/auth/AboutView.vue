@@ -17,7 +17,7 @@
         <v-row class="justify-center">
           <v-col cols="12" md="5">
             <v-card class="pa-6 rounded-lg text-white" color="#5D4037" elevation="0">
-              <div class="text-body-1 text-left">
+              <div id="body" class="text-left text-bold">
                 We guarantee that our solid wood products meet the highest quality standards. With
                 precision craftsmanship and we create Kitchen Furniture, Living Room Furniture,
                 Bedroom Furniture, and more customized to your specifications.
@@ -85,6 +85,10 @@
 </template>
 
 <style scoped>
+#body {
+  font-size: 28px;
+  font-weight: bold;
+}
 .about-page {
   background-color: #75584a;
   min-height: 100vh;

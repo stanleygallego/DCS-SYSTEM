@@ -123,6 +123,13 @@ const selectImage = (imageIndex) => {
 <template>
   <v-app>
     <v-app-bar color="brown" dark app>
+      <RouterLink to="/">
+        <v-btn icon class="ma-4" color="white" variant="text">
+          <div>
+            <v-icon class="black">mdi-arrow-left</v-icon>
+          </div>
+        </v-btn>
+      </RouterLink>
       <v-app-bar-nav-icon
         v-if="currentView === 'details'"
         @click="backToGallery"

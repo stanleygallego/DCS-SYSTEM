@@ -27,112 +27,12 @@ const appBarTitle = computed(() => {
 const furniture = ref([
   {
     id: 1,
-    name: 'Modern Sofa',
+    name: 'Sofa',
     category: 'living',
-    price: 899.99,
+    price: 999,
     image:
       'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description:
-      'Comfortable modern sofa with premium fabric upholstery, perfect for your living room.',
-  },
-  {
-    id: 2,
-    name: 'Coffee Table',
-    category: 'living',
-    price: 249.99,
-    image: '/images/images/kape.jpg',
-    description:
-      'Elegant coffee table with a glass top and wooden base, adds style to any living space.',
-  },
-  {
-    id: 3,
-    name: 'Queen Bed Frame',
-    category: 'bedroom',
-    price: 599.99,
-    image:
-      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description: 'Sturdy queen-sized bed frame with a padded headboard for maximum comfort.',
-  },
-  {
-    id: 4,
-    name: 'Wardrobe',
-    category: 'bedroom',
-    price: 799.99,
-    image:
-      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description: 'Spacious wardrobe with multiple compartments and a full-length mirror.',
-  },
-  {
-    id: 5,
-    name: 'Dining Table',
-    category: 'kitchen',
-    price: 499.99,
-    image:
-      'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description:
-      'Extendable dining table that seats up to 8 people, perfect for family gatherings.',
-  },
-  {
-    id: 6,
-    name: 'Bar Stools',
-    category: 'kitchen',
-    price: 129.99,
-    image:
-      'https://images.unsplash.com/photo-1551516594-56cb78394645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description: 'Set of 2 adjustable height bar stools with footrests and comfortable seating.',
-  },
-  {
-    id: 7,
-    name: 'Custom Bookshelf',
-    category: 'custom',
-    price: 349.99,
-    image: '/images/images/shelf.jpg',
-    description:
-      'Customizable bookshelf with adjustable shelves to fit your specific needs and space.',
-  },
-  {
-    id: 8,
-    name: 'Custom TV Stand',
-    category: 'custom',
-    price: 279.99,
-    image: '/images/images/tv.jpg',
-    description: 'Made-to-order TV stand with cable management and storage options.',
-  },
-  {
-    id: 9,
-    name: 'Armchair',
-    category: 'living',
-    price: 349.99,
-    image:
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description: 'Comfortable armchair with high-quality fabric and sturdy wooden legs.',
-  },
-  {
-    id: 10,
-    name: 'Nightstand',
-    category: 'bedroom',
-    price: 149.99,
-    image:
-      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description: 'Elegant nightstand with drawer and shelf, perfect for bedside storage.',
-  },
-  {
-    id: 11,
-    name: 'Kitchen Island',
-    category: 'kitchen',
-    price: 699.99,
-    image: '/images/images/kusina.jpg',
-    description: 'Multifunctional kitchen island with storage space and breakfast bar.',
-  },
-  {
-    id: 12,
-    name: 'Custom Desk',
-    category: 'custom',
-    price: 429.99,
-    image:
-      'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-    description:
-      'Custom-built desk designed to your specifications with built-in cable management.',
+    description: 'Lami ni ingkuran',
   },
 ])
 
@@ -227,14 +127,8 @@ const selectImage = (imageIndex) => {
         v-if="currentView === 'details'"
         @click="backToGallery"
       ></v-app-bar-nav-icon>
-      <RouterLink to="/">
-        <v-btn icon class="" color="white" variant="text">
-          <div>
-            <v-icon class="black">mdi-arrow-left</v-icon>
-          </div>
-        </v-btn>
-      </RouterLink>
-      <v-app-bar-title>DCS WOODWORKS</v-app-bar-title>
+
+      <v-app-bar-title> DCS WOODWORKS </v-app-bar-title>
       <v-spacer></v-spacer>
       <v-text-field
         v-if="currentView === 'gallery'"

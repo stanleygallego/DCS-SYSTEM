@@ -21,7 +21,7 @@ const submitProduct = () => {
     <v-card
       class="mx-auto pa-8"
       max-width="600"
-      style="background-color: #4e342e; border-radius: 20px"
+      style="background-color: #6d4c41; border-radius: 20px"
     >
       <div class="d-flex justify-space-between align-center mb-6">
         <h2 class="text-white font-weight-bold">WoodWorks</h2>
